@@ -1,6 +1,6 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        checked = set([])
+        checked = set()
         for num in nums:
             if num in checked:
                 return True
