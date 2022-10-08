@@ -6,6 +6,6 @@ class Solution(object):
         :rtype: List[int]
         """
         for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
+            find_num = target - nums[i]
+            if find_num in nums and nums.index(find_num) != i:
+                return [i, nums.index(find_num)]
