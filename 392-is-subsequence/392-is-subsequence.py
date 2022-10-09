@@ -7,8 +7,6 @@ class Solution(object):
         """
         if len(s) == 0:
             return True
-        if len(t) < len(s) or len(t) == 0:
-            return False
         
         j = 0
         for i in range(len(t)):
