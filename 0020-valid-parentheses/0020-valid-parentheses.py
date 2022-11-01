@@ -6,12 +6,10 @@ class Solution(object):
         """
         br = {'{': '}', '(': ')', '[': ']'}
         stack = []
-            
-        for i in range(len(s)):
-            if len(stack) == 0:
-                stack.append(s[i])
-                continue
-            if s[i] == br.get(stack[-1], ''):
+        
+        stack.append(s[0])
+        for i in range(1, len(s)):
+            if len(stack) > 0 and s[i] == br.get(stack[-1], ''):
                 stack.pop()
             else:
                 stack.append(s[i])
